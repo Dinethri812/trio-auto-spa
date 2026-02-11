@@ -1,0 +1,337 @@
+.Admin {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #020b26 0, #020617 45%, #000 100%);
+  color: var(--color-text-primary);
+}
+
+.Admin-header {
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  background: linear-gradient(to right, rgba(2, 6, 23, 0.98), rgba(15, 23, 42, 0.96));
+  backdrop-filter: blur(22px);
+}
+
+.Admin-header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.Admin-back {
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.Admin-back:hover {
+  color: #38bdf8;
+}
+
+.Admin-header h1 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.Admin-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 20px;
+}
+
+.Admin-message,
+.Admin-error {
+  text-align: center;
+  padding: 24px;
+  color: var(--color-text-muted);
+}
+
+.Admin-error {
+  color: #f87171;
+}
+
+.Admin-table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  background: rgba(15, 23, 42, 0.6);
+  box-shadow: var(--shadow-soft);
+}
+
+.Admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.Admin-table th,
+.Admin-table td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.Admin-table th {
+  background: rgba(15, 23, 42, 0.9);
+  color: #94a3b8;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.Admin-table tbody tr:hover:not(.Admin-row-editing) {
+  background: rgba(56, 189, 248, 0.06);
+}
+
+.Admin-status {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.Admin-status-pending {
+  background: rgba(251, 191, 36, 0.2);
+  color: #fbbf24;
+}
+
+.Admin-status-confirmed {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.Admin-status-completed {
+  background: rgba(148, 163, 184, 0.2);
+  color: #94a3b8;
+}
+
+.Admin-status-cancelled,
+.Admin-status-rejected {
+  background: rgba(248, 113, 113, 0.2);
+  color: #f87171;
+}
+
+.Admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.Admin-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s, opacity 0.15s;
+}
+
+.Admin-btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.Admin-btn-confirm {
+  background: rgba(34, 197, 94, 0.25);
+  color: #22c55e;
+}
+
+.Admin-btn-confirm:hover {
+  background: rgba(34, 197, 94, 0.4);
+}
+
+.Admin-btn-edit {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+}
+
+.Admin-btn-edit:hover {
+  background: rgba(56, 189, 248, 0.35);
+}
+
+.Admin-btn-delete {
+  background: rgba(248, 113, 113, 0.2);
+  color: #f87171;
+}
+
+.Admin-btn-delete:hover {
+  background: rgba(248, 113, 113, 0.35);
+}
+
+.Admin-btn-reject {
+  background: rgba(251, 146, 60, 0.25);
+  color: #fb923c;
+}
+
+.Admin-btn-reject:hover {
+  background: rgba(251, 146, 60, 0.4);
+}
+
+.Admin-btn-logout {
+  background: rgba(51, 65, 85, 0.6);
+  color: #94a3b8;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+}
+
+.Admin-btn-logout:hover {
+  background: rgba(51, 65, 85, 0.9);
+  color: #e2f3ff;
+}
+
+/* Login form */
+.Admin-login-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.Admin-login-form {
+  width: 100%;
+  max-width: 340px;
+  padding: 28px;
+  background: rgba(15, 23, 42, 0.9);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  box-shadow: var(--shadow-soft);
+}
+
+.Admin-login-form h2 {
+  margin: 0 0 20px;
+  font-size: 1.25rem;
+}
+
+.Admin-login-error {
+  margin: 0 0 12px;
+  padding: 8px 10px;
+  font-size: 0.85rem;
+  color: #f87171;
+  background: rgba(248, 113, 113, 0.15);
+  border-radius: 8px;
+}
+
+.Admin-login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.Admin-login-field label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+}
+
+.Admin-login-field input {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  background: rgba(2, 6, 23, 0.9);
+  color: var(--color-text-primary);
+  font-size: 0.9rem;
+}
+
+.Admin-login-field input:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.Admin-login-submit {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+
+.Admin-btn-primary {
+  background: linear-gradient(to right, #0ea5e9, #38bdf8);
+  color: #020617;
+  padding: 8px 16px;
+}
+
+.Admin-btn-secondary {
+  background: rgba(51, 65, 85, 0.8);
+  color: var(--color-text-primary);
+  padding: 8px 16px;
+}
+
+.Admin-edit-cell {
+  padding: 16px !important;
+  background: rgba(15, 23, 42, 0.95);
+  border-left: 3px solid #38bdf8;
+}
+
+.Admin-edit-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+  max-width: 700px;
+}
+
+.Admin-edit-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.Admin-edit-row-full {
+  grid-column: 1 / -1;
+}
+
+.Admin-edit-row label {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.Admin-edit-row input,
+.Admin-edit-row select,
+.Admin-edit-row textarea {
+  border-radius: 8px;
+  border: 1px solid rgba(51, 65, 85, 0.9);
+  background: rgba(2, 6, 23, 0.9);
+  padding: 6px 10px;
+  color: var(--color-text-primary);
+  font-size: 0.88rem;
+}
+
+.Admin-edit-row input:focus,
+.Admin-edit-row select:focus,
+.Admin-edit-row textarea:focus {
+  outline: none;
+  border-color: #38bdf8;
+}
+
+.Admin-edit-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+@media (max-width: 700px) {
+  .Admin-edit-form {
+    grid-template-columns: 1fr;
+  }
+
+  .Admin-table th:nth-child(n+4),
+  .Admin-table td:nth-child(n+4) {
+    display: none;
+  }
+
+  .Admin-table th:first-child,
+  .Admin-table td:first-child,
+  .Admin-table th:nth-child(2),
+  .Admin-table td:nth-child(2),
+  .Admin-table th:last-child,
+  .Admin-table td:last-child {
+    display: table-cell;
+  }
+}

@@ -1,0 +1,58 @@
+export const SERVICES = [
+  {
+    id: "express-wash",
+    name: "Express Wash",
+    price: 35,
+    description: "Quick exterior refresh for busy days.",
+    features: ["Foam hand wash & dry", "Wheel & tire clean", "Streak-free glass"],
+  },
+  {
+    id: "basic-interior",
+    name: "Basic Interior Clean",
+    price: 55,
+    description: "Thorough vacuum and interior wipe-down.",
+    features: ["Full vacuum", "Dashboard & console clean", "Floor mats shampoo"],
+  },
+  {
+    id: "full-interior",
+    name: "Full Interior Reset",
+    price: 95,
+    description: "Deep clean focused inside your vehicle.",
+    features: ["Vacuum & interior wipe-down", "Crevice & vent detailing", "Leather & trim conditioning"],
+  },
+  {
+    id: "exterior-detail",
+    name: "Exterior Detail",
+    price: 75,
+    description: "Paint enhancement and exterior restoration.",
+    features: ["Hand wash & clay bar", "Paint correction prep", "Trim & wheel dressing"],
+  },
+  {
+    id: "full-detail",
+    name: "Full Detail (Interior + Exterior)",
+    price: 165,
+    description: "Complete inside-and-out transformation.",
+    features: ["Everything in Full Interior + Exterior", "Door jambs & trunk", "Engine bay wipe-down"],
+  },
+  {
+    id: "ceramic-protection",
+    name: "Ceramic Protection",
+    price: 299,
+    description: "Long-lasting gloss and paint protection.",
+    features: ["Paint decontamination", "Ceramic sealant application", "Up to 6–12 months protection"],
+  },
+  {
+    id: "headlight-restoration",
+    name: "Headlight Restoration",
+    price: 65,
+    description: "Clear, safe headlights that shine like new.",
+    features: ["Sanding & polish", "UV sealant application", "Restored visibility"],
+  },
+  {
+    id: "pet-hair-removal",
+    name: "Pet Hair Removal",
+    price: 70,
+    description: "Specialized removal for furry passengers.",
+    features: ["Deep extraction", "Upholstery refresh", "Odor neutralizer add-on available"],
+  },
+];

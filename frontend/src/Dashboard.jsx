@@ -10,10 +10,23 @@ function Dashboard() {
   }, []);
 
   return (
-    <div>
-      <h2>Dashboard</h2>
-      <p>Total Bookings: {data.totalBookings}</p>
-      <p>Pending: {data.pendingBookings}</p>
+    <div className="Dashboard">
+      <div className="Dashboard-card">
+        <h2>Bookings dashboard</h2>
+        <p className="Dashboard-subtitle">
+          Quick overview of your current bookings.
+        </p>
+        <div className="Dashboard-grid">
+          <div className="Dashboard-stat">
+            <span className="Dashboard-stat-label">Total bookings</span>
+            <span className="Dashboard-stat-value">{data.totalBookings ?? "--"}</span>
+          </div>
+          <div className="Dashboard-stat">
+            <span className="Dashboard-stat-label">Pending</span>
+            <span className="Dashboard-stat-value">{data.pendingBookings ?? "--"}</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
